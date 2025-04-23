@@ -4,7 +4,7 @@
 
 This repository contains Python code for Bayesian Bandit Testing, an advanced A/B testing method. It dynamically allocates traffic to different versions based on performance, leading to efficient use of traffic and higher conversion rates. The code also includes Bayesian A/B testing, and generates various plots for result visualization.
 
-![Traffic Allocation Comparison](images/traffic_allocation.png)
+![Traffic Allocation Comparison](images/Traffic%20Allocation%20Comparison.png)
 _Comparison of traffic allocation strategies: Traditional A/B testing (left) maintains fixed traffic distribution until a winner is determined, while Multi-Armed Bandit (right) gradually shifts traffic to better performing variants._
 
 ## Introduction
@@ -21,17 +21,17 @@ However, traditional A/B testing has several limitations. It requires a fixed sa
 
 Bayesian A/B testing provides a flexible and intuitive approach to understanding the data. Instead of relying on p-values and confidence intervals, it uses probability distributions to represent the uncertainty about the true conversion rates of the different versions. This allows you to update your understanding of the conversion rates as data comes in, and to make decisions at any time, not just at the end of the test.
 
-![Prior Evolution](images/prior_evolution.png)
+![Prior Evolution](images/Prior%20Evaluation.png)
 _Evolution of prior distributions over different steps in the Bayesian testing process. As more data is collected, the distributions become more concentrated around the true conversion rates._
 
 ### Bayesian Bandit Testing
 
 Bayesian Bandit Testing incorporates the principles of multi-armed bandit algorithms. This approach dynamically allocates traffic to different versions based on their performance, leading to more efficient use of traffic and higher overall conversion rates during the test.
 
-![Bandit Setup Process](images/bandit_setup.png)
+![Bandit Setup Process](images/Bandit%20Setup%20Process.png)
 _Flowchart showing the complete process of setting up and running a Bayesian Bandit test, from initialization to ongoing optimization._
 
-![Strategy Comparison](images/strategy_comparison.png)
+![Strategy Comparison](images/Strategy%20Comparison.png)
 _Performance comparison between different bandit strategies: ε-greedy, Thompson Sampling, and Random allocation. Thompson Sampling and ε-greedy converge to optimal performance, while random allocation underperforms._
 
 ### The code
