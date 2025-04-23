@@ -4,6 +4,9 @@
 
 This repository contains Python code for Bayesian Bandit Testing, an advanced A/B testing method. It dynamically allocates traffic to different versions based on performance, leading to efficient use of traffic and higher conversion rates. The code also includes Bayesian A/B testing, and generates various plots for result visualization.
 
+![Traffic Allocation Comparison](images/traffic_allocation.png)
+_Comparison of traffic allocation strategies: Traditional A/B testing (left) maintains fixed traffic distribution until a winner is determined, while Multi-Armed Bandit (right) gradually shifts traffic to better performing variants._
+
 ## Introduction
 
 This repository contains Python code for Bayesian Bandit Testing, a method that enhances traditional A/B testing by incorporating Bayesian statistics and multi-armed bandit algorithms. This approach allows for dynamic traffic allocation to different versions based on their performance, leading to more efficient use of traffic and higher overall conversion rates during the test.
@@ -18,9 +21,18 @@ However, traditional A/B testing has several limitations. It requires a fixed sa
 
 Bayesian A/B testing provides a flexible and intuitive approach to understanding the data. Instead of relying on p-values and confidence intervals, it uses probability distributions to represent the uncertainty about the true conversion rates of the different versions. This allows you to update your understanding of the conversion rates as data comes in, and to make decisions at any time, not just at the end of the test.
 
+![Prior Evolution](images/prior_evolution.png)
+_Evolution of prior distributions over different steps in the Bayesian testing process. As more data is collected, the distributions become more concentrated around the true conversion rates._
+
 ### Bayesian Bandit Testing
 
 Bayesian Bandit Testing incorporates the principles of multi-armed bandit algorithms. This approach dynamically allocates traffic to different versions based on their performance, leading to more efficient use of traffic and higher overall conversion rates during the test.
+
+![Bandit Setup Process](images/bandit_setup.png)
+_Flowchart showing the complete process of setting up and running a Bayesian Bandit test, from initialization to ongoing optimization._
+
+![Strategy Comparison](images/strategy_comparison.png)
+_Performance comparison between different bandit strategies: ε-greedy, Thompson Sampling, and Random allocation. Thompson Sampling and ε-greedy converge to optimal performance, while random allocation underperforms._
 
 ### The code
 
@@ -49,10 +61,10 @@ In addition, there are a number of notebooks, which serve as the main code for t
 
 - `bayesian_bandit_test.py`: This script contains the `BayesianBanditTest` class, which performs a Bayesian Bandit test on the campaign data. It uses a multi-armed bandit approach to dynamically allocate impressions to the campaigns based on their performance.
 
-
 ## Usage
 
 ### Create virtual environment
+
     python -m venv --system-site-packages venvs/recsys
     source ~/venvs/recsys/bin/activate
     pip install -r requirements.txt
@@ -61,10 +73,9 @@ In addition, there are a number of notebooks, which serve as the main code for t
 
 To run the code, open the `bayesian_ab_testing.ipynb`, `bayesian_bandit_AA_testing.ipynb`, or `bayesian_bandit_AB_testing.ipynb` file in a Jupyter notebook environment and execute the cells. Make sure to have the `campaign.py`, `bayesian_test.py`, and `bayesian_bandit_test.py` files in the same directory.
 
-
 ## Presentation
-You can find the presention under the pdf folder: [Bayesian A/B-testing](pdf/Bayesian%20AB-testing.pdf)
 
+You can find the presention under the pdf folder: [Bayesian A/B-testing](pdf/Bayesian%20AB-testing.pdf)
 
 ## Contributing
 
@@ -75,4 +86,5 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 [MIT](https://choosealicense.com/licenses/mit/)
 
 ## Contact
+
 For any quesstions, feel free to reach out to "info at arngren dot com"
